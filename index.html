@@ -7,41 +7,60 @@
 </head>
 
 <body>
-
-  <h2>Welcome to A Pizza Pizza Pi, Where the flavor spirals forever!</h2>
-    <p>Please refers to our sizes and toppings below!</p>
-    <br>
-    <div class="dropdown">
-
-      <form id="sizes">
-        <label for="sizes">Sizes:</label>
-        <select id="sizes" name="sizes" multiple>
-          <option let value="Small">Small</option>
-          <option let value="medium">Medium</option>
-          <option let value="large">Large</option>
-          <option let value="pi">Pi</option>
-          <button type="submit"></button>
-        </select>
-        <br>
-
-      
-        <label for="toppings">Toppings:</label>
-        <select id="toppings" name="toppings" multiple>
-          <option value="olives">Olives</option>
-          <option value="peppers">Peppers</option>
-          <option value="sausage">Sausage</option>
-          <option value="anchovy">Anchovy</option>
-        </select>
-        <br>
-
-        <label for="meats">meats:</label>
-        <select id="meats" id="meats"></select>
-          <option value="pepperoni">pepperoni</option>
-          <option value="sausage">sausage</option>
-          <option value="salami">salami</option>
-        <button type="submit">Order Now</button>
-      </form>
-
+  <form>
+    <fieldset>
+      <legend>Choose a size:</legend>
+      <label>
+        <input type="radio" name="size" value="10" checked>
+        Small ($10)
+      </label>
+      <label>
+        <input type="radio" name="size" value="15">
+        Medium ($15)
+      </label>
+      <label>
+        <input type="radio" name="size" value="20">
+        Large ($20)
+      </label>
+    </fieldset>
+    
+    <fieldset>
+      <legend>Choose up to 3 veggies:</legend>
+      <label>
+        <input type="checkbox" name="veggies" value="2">
+        Mushroom
+      </label>
+      <label>
+        <input type="checkbox" name="veggies" value="2">
+        Onion
+      </label>
+      <label>
+        <input type="checkbox" name="veggies" value="2">
+        Bell Pepper
+      </label>
+    </fieldset>
+    
+    <fieldset>
+      <legend>Choose up to 3 meats:</legend>
+      <label>
+        <input type="checkbox" name="meats" value="3">
+        Pepperoni
+      </label>
+      <label>
+        <input type="checkbox" name="meats" value="3">
+        Sausage
+      </label>
+      <label>
+        <input type="checkbox" name="meats" value="3">
+        Bacon
+      </label>
+    </fieldset>
+    
+    <button type="button" onclick="calculateTotal()">Calculate Total</button>
+    
+    <div id="totalPrice"></div>
+  </form>
+  
     
     
 </body>
